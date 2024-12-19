@@ -1,0 +1,24 @@
+.users-list {
+  list-style: none;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.users-list li {
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: white;
+}
+
+.users-list h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+}
+
+.users-list p {
+  margin: 5px 0;
+  opacity: 0.9;
+} 
