@@ -4,7 +4,7 @@
 **Prompt**: "can u add some css styling for our html elements? responsive"
 **AI-verktyg**: Claude 3.5 Sonnet
 
-![CSS styling request](./CSS.png)
+![CSS styling request](./images/CSS.png)
 
 **Sammanfattning av svar**: AI:n implementerade responsiv CSS-styling med:
 - Grundläggande reset och typografi-inställningar
@@ -21,7 +21,7 @@
 **Prompt**: "can u read the instructions document and double check if we have followed every instruction in the doc?"
 **AI-verktyg**: Claude 3.5 Sonnet
 
-![Instructions verification](./CheckInstructions.png)
+![Instructions verification](./images/CheckInstructions.png)
 
 **Sammanfattning av svar**: AI:n verifierade och förbättrade koden enligt instruktionerna:
 - Lade till ID-visning i användarkorten
