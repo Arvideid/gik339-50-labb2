@@ -17,14 +17,27 @@ server.use((req, res, next) => {
 
 // GET route för /users
 server.get("/users", (req, res) => {
-  const db = new sqlite3.Database("./gik339-labb2.db");
+  const db = new sqlite3.Database("./gik339-labb2.db", (err) => {
+    if (err) {
+      console.error('Error opening database:', err);
+      return res.status(500).send('Database connection error');
+    }
+  });
   
   db.all("SELECT * FROM users", (err, rows) => {
+    if (err) {
+      console.error('Error querying database:', err);
+      res.status(500).send(err);
+    } else {
+      res.send(rows);
+    }
+    
+    // Close the database connection
+    db.close((err) => {
       if (err) {
-          res.status(500).send(err);
-      } else {
-          res.send(rows);
+        console.error('Error closing database:', err);
       }
+    });
   });
 });
 

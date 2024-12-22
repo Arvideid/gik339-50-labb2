@@ -8,10 +8,11 @@ const fetchUsers = async () => {
 
   users.forEach(user => {
     const li = document.createElement('li');
-    li.style.backgroundColor = user.color;
+    li.style.setProperty('--user-color', user.color);
     li.innerHTML = `
       <h3>${user.firstName} ${user.lastName}</h3>
       <p>Username: ${user.username}</p>
+      <p>ID: ${user.id}</p>
     `;
     ul.appendChild(li);
   });
